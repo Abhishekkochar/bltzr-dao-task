@@ -33,3 +33,4 @@ To encounter the above, we passed the Pudgy Penguins contract address. Doing so 
 - Only input address that holds the Pudgy Penguins collection.
 - Only read basic NFT data.
 - Only processing image for NFTs, no video.
+- Only for desktop site.
