@@ -1,5 +1,5 @@
 ## Live deployment 
-[https://bltzr-dao-task-d47k95pf1-abhishekkochars-projects.vercel.app/](https://bltzr-dao-task-d47k95pf1-abhishekkochars-projects.vercel.app/) to see the live preview.
+[https://bltzr-dao-task-d47k95pf1-abhishekkochars-projects.vercel.app/]https://bltzr-dao-task-d47k95pf1-abhishekkochars-projects.vercel.app/ to see the live preview.
 Alchemy api key is allow for th above URL. If trying to run locally please provide API in local .env file.
 
 ## Getting Started
