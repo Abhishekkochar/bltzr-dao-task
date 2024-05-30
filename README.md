@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
-
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+npm i
 
+npm run dev
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+When clicked on `fetch` button without providing an wallet address, address `0x9355e3fa0d4B14A14ca160497e20438249b7C360` Pudgy Penguins collection will be shown. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## A brief overview of the chosen technologies and APIs.
 
-## Learn More
+We have selected React, and TS with Next.js for development purposes. We are using 3rd-party API and deployment services such as Alchemy and Vercel, to fetch the provided address's NFTs and deploy the app respectively.
 
-To learn more about Next.js, take a look at the following resources:
+## Challenges faced and how they were overcome.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We had Nft's image conflict in starting. When importing images over the internet, we need to specify the image's remote patterns. While this is not the major issue, however, most of the time, different collections have different image URLs. This can't be automated. In this case, we decided to use Alchemy's cached URL, this provided us with a stable source.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- If there are more than 100 Nfts held by the user, the backend will have to call the API again with PageKey param. This will incur unwanted API calls.
+- Few spam NFTs can add up the API calls as well.
 
-## Deploy on Vercel
+To encounter the above, we passed the Pudgy Penguins contract address. Doing so will get us this specific collection. We can up to 20 contract addresses.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Any assumptions made during development.
+- Only a valid ERC20 address will be provided.
+- Only input address that holds the Pudgy collection.
+- Only read basic NFT data.
