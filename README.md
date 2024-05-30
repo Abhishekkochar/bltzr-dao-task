@@ -1,3 +1,7 @@
+## Live deployment 
+[https://bltzr-dao-task-d47k95pf1-abhishekkochars-projects.vercel.app/](https://bltzr-dao-task-d47k95pf1-abhishekkochars-projects.vercel.app/) to see the live preview.
+Alchemy api key is allow for th above URL. If trying to run locally please provide API in local .env file.
+
 ## Getting Started
 First, run the development server:
 
@@ -28,3 +32,4 @@ To encounter the above, we passed the Pudgy Penguins contract address. Doing so 
 - Only a valid ERC20 address will be provided.
 - Only input address that holds the Pudgy collection.
 - Only read basic NFT data.
+- Only processing image for NFTs, no video.
