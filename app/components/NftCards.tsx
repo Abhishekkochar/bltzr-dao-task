@@ -1,5 +1,5 @@
 import NftCard from "./NftCard";
-import NoPreview from "../public/loading.gif"
+import NoPreview from "../../public/loading.gif"
 
 export default function NftCards({nftList}:any){
     return(
@@ -12,9 +12,13 @@ export default function NftCards({nftList}:any){
 interface ItemParams{
     tokenUri:string,
     tokenId:string,
+    contract:ContractParam,
     image:ImageParam,
     name:string
 }
 interface ImageParam{
     cachedUrl: string | undefined 
+}
+interface ContractParam{
+    address: string
 }
