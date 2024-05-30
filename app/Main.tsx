@@ -4,7 +4,7 @@ import NftCards from "./NftCards";
 
 export default function Main(){
     const [inputAddress, setInputAddress] = useState('0xC79BAB87c2ead914A29e394Fbe28E1ef78b57115')
-    const [nftList, setNftList] = useState([]);
+    const [nftList, setNftList] = useState<{}>([]);
 
     const config = {
     apiKey:"yOTm9m3zIlntwgzKXJfu07FBDOv1LAeo",
@@ -16,9 +16,8 @@ export default function Main(){
         try{
             // Get all NFTs
             const nfts = await alchemy.nft.getNftsForOwner(inputAddress);
-            setNftList(nfts.ownedNfts)
-            // Print NFTs
-            console.log(nfts.ownedNfts);
+            const nftLists = nfts.ownedNfts
+            setNftList(nftLists)
         } catch(e){
             console.log(e)
         }

@@ -1,11 +1,10 @@
 import NftCard from "./NftCard";
-import loading from "../public/loading.gif"
-import { StaticImageData } from "next/image";
+import NoPreview from "../public/loading.gif"
 
 export default function NftCards({nftList}:any){
     return(
         <div className='grid grid-cols-4 gap-4 min-w-min max-w-full min-h-full'>
-            {nftList.map((item:ItemParams)=>(<NftCard key={item.tokenUri} tokenId={item.tokenId} url={item.image.cachedUrl ?? loading} name={item.name}/>))}  
+            {nftList.map((item:ItemParams)=>(<NftCard key={item.tokenUri} tokenId={item.tokenId} url={item.image.cachedUrl ?? NoPreview} name={item.name}/>))}  
         </div>
     )
 }

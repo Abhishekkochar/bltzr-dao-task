@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
-
+## Instructions on how to set up and run the project.
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+npm i
 
+npm run dev
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+When clicked on ``fetch`` button without providing an wallet address, address `0xC79BAB87c2ead914A29e394Fbe28E1ef78b57115`'s NFTs will be shown. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## A brief overview of the chosen technologies and APIs.
 
-To learn more about Next.js, take a look at the following resources:
+We have selected React, TS with Next.js for the devleopment purpose. We are using 3rd-party api and deployment services such as Alchemy and Vercel, to fetch provided address's NFTs and deploy the app respectively.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Challenges faced and how they were overcome.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We had Nft's image confict in starting. When importing images over the internet, we need to specify the image's remote patterns. While this is not the major issue, however most of the time, different collections have different image url. This can't be automated. In this case, we decided to use Alchemy's cached url, this provide us with the stable source.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Any assumptions made during development.
+- Only the valid ERC20 address will be provided.
